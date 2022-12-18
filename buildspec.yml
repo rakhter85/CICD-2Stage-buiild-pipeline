@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9 # it will install python 3.9
+  pre_build:
+    commands:
+      - echo We are entering the prebuild phase
+      - echo Checking python version installed
+      - python --version
+  build:
+    commands:
+      - echo Build started on `date`
+      - pwd
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - ls -l
+      - echo Thank you - Rokshana Akhter
+artifacts:
+  files:
+    - '**/*'
